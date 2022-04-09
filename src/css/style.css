@@ -1,3 +1,74 @@
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #344051;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -5,7 +76,9 @@ body {
 nav {
     width: 100%;
     height: 60px;
-    background:#344051;
+    background: #344051;
+    position: fixed;
+    z-index: 101;
 }
 
 .logo {
@@ -14,6 +87,9 @@ nav {
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
 }
 
 .menu {
@@ -28,12 +104,21 @@ nav {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
 }
 
 .main {
     width: 100%;
-    height: calc(100% - 60px);
-    background: url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C.png) 90% 100%/auto 85% no-repeat , url(../img/%D1%84%D0%BE%D0%BD.jpg) center/cover no-repeat;
+    height: 100%;
+    background: url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C.png) 90% 100%/auto 85% no-repeat, url(../img/%D1%84%D0%BE%D0%BD.jpg) center/cover no-repeat;
 }
 
 .title_container {
@@ -41,11 +126,18 @@ nav {
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
 }
 
 .title_container h1 {
     font-size: 60px;
-    font-weight: bold;       
+    font-weight: bold;
 }
 
 .title_container h4 {
@@ -66,17 +158,108 @@ nav {
     margin: 58px 14px 0px 14px;
 }
 
+.menu li a {
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #f8a02b;
+
+}
+
+.menu li a:active {
+    transform: scale(1.1)
+}
+
+
+.title_container input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.title_container input:hover {
+    background: #344051;
+    color: white;
+}
+
+.title_container input:active {
+    transform: scale(1.1)
+}
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.menu li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6) {
+    animation-delay: 2s;
+}
+
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+
+/*ОБО МНЕ*/
+
 .about me {
     width: 100%;
     height: 720px;
 }
 
 .info {
-     width: 100%;
-     height: 720px;
-     background: #fcfdfd;
-     float: left;
-     
+    width: 100%;
+    height: 720px;
+    background: #fcfdfd;
+    float: left;
+
 }
 
 .info h2 {
@@ -84,6 +267,8 @@ nav {
     font-weight: bold;
     color: #263244;
     margin: 110px 0px 0px 896px;
+    transition: all 0.2s;
+
 }
 
 .info-therta {
@@ -92,9 +277,12 @@ nav {
 
 .info-foto {
     margin: 0px 0px 25px 862px;
+    -webkit-animation: info-foto 3s alternate infinite;
+    -o-animation: info-foto 3s alternate infinite;
+    animation: info-foto 3s alternate infinite;
 }
 
-.info-text_1{
+.info-text_1 {
     display: block;
     margin-left: 650px;
     font-size: 18px;
@@ -108,7 +296,7 @@ nav {
     color: #80858f;
 }
 
-.info input{
+.info input {
     height: 30px;
     text-align: center;
     border: 2px solid #6f707e;
@@ -118,8 +306,36 @@ nav {
     color: #6f707e;
     padding: 0px 10px;
     margin: 31px 0px 0px 890px;
-   
+
 }
+
+
+.info h2:hover {
+    color: #f8a02b;
+}
+
+@keyframes info-foto {
+    to {
+        transform: scale3d(50%, 50%, 50%);
+    }
+}
+
+.info input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.info input:hover {
+    background: #f8a02b;
+    color: white;
+}
+
+.info input:active {
+    transform: scale(0.9, 0.9)
+}
+
+
+/*ЧТО Я УМЕЮ*/
 
 .What I can do {
     width: 100%;
@@ -137,7 +353,9 @@ nav {
     margin: 110px 0px 0px 870px;
     font-size: 30px;
     font-weight: bold;
-    
+    transition: all 0.2s;
+
+
 }
 
 .ability-therta {
@@ -147,21 +365,29 @@ nav {
 .ability-img1 {
     display: inline-block;
     margin: 110px 0px 0px 495px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
 
 .ability-img2 {
     display: inline-block;
     margin: 110px 0px 0px 240px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
 
 .ability-img3 {
     display: inline-block;
     margin: 110px 0px 0px 240px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
 
 .ability-img4 {
     display: inline-block;
     margin: 110px 0px 0px 240px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
 
 .ability-web {
@@ -200,7 +426,7 @@ nav {
     float: left;
     font-size: 15px;
     color: #80858f;
-    margin-top: 20px; 
+    margin-top: 20px;
     text-align: center;
     margin: 25px 0px 0px 400px;
     line-height: 20px;
@@ -210,7 +436,7 @@ nav {
     float: left;
     font-size: 15px;
     color: #80858f;
-    margin: 25px 0px 0px 70px; 
+    margin: 25px 0px 0px 70px;
     text-align: center;
     line-height: 20px;
 }
@@ -232,6 +458,102 @@ nav {
     line-height: 20px;
     margin: 25px 0px 0px 50px;
 }
+
+
+
+.ability h2:hover {
+    color: #f8a02b;
+}
+
+.ability-img1:hover {
+    transform: scale(2, 2);
+}
+
+.ability-img1:active {
+    transform: scale(1, 1);
+}
+
+.ability-img2:hover {
+    transform: scale(2, 2);
+}
+
+.ability-img2:active {
+    transform: scale(1, 1);
+}
+
+.ability-img3:hover {
+    transform: scale(2, 2);
+}
+
+.ability-img3:active {
+    transform: scale(1, 1);
+}
+
+.ability-img4:hover {
+    transform: scale(2, 2);
+}
+
+.ability-img4:active {
+    transform: scale(1, 1);
+
+}
+
+
+.ability-web:hover {
+    color: #263244;
+    transform: scale(1);
+}
+
+.ability-web:active {
+    transform: scale(0.8, 0.8);
+}
+
+.ability-Development:hover {
+    color: #263244;
+    transform: scale(1);
+}
+
+.ability-Development:active {
+    transform: scale(0.8, 0.8);
+}
+
+.ability-optimization:hover {
+    color: #263244;
+    transform: scale(1);
+}
+
+.ability-optimization:active {
+    transform: scale(0.8, 0.8);
+}
+
+.ability-marketing:hover {
+    color: #263244;
+    transform: scale(1);
+}
+
+.ability-marketing:active {
+    transform: scale(0.8, 0.8);
+}
+
+.ability-small-1:hover {
+    color: #f8a02b;
+}
+
+.ability-small-2:hover {
+    color: #f8a02b;
+}
+
+.ability-small-3:hover {
+    color: #f8a02b;
+}
+
+.ability-small-4:hover {
+    color: #f8a02b;
+}
+
+
+/*КЕЙСЫ*/
+
 .collection {
     width: 100%;
     height: 1180px;
@@ -249,6 +571,7 @@ nav {
     margin: 110px 0px 0px 870px;
     font-size: 30px;
     font-weight: bold;
+    transition: all 0.2s;
 }
 
 .cases-therta {
@@ -268,6 +591,7 @@ nav {
     height: 920px;
     background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B01.png) 10px 30px/1500px 900px no-repeat;
     float: left;
+
 }
 
 .cases-client {
@@ -283,7 +607,7 @@ nav {
     color: #3f495a;
 }
 
-.cases-small-3{
+.cases-small-3 {
     font-size: 15px;
     color: #3f495a;
 }
@@ -313,6 +637,35 @@ nav {
     margin: 25px 0px 0px 388px;
 }
 
+
+.cases h2:visited {
+    color: #263244;
+}
+
+.cases h2:hover {
+    color: #f8a02b;
+}
+
+.cases-small-1:hover {
+    color: #f8a02b;
+}
+
+.cases input {
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.cases input:hover {
+    color: white;
+}
+
+.cases input:active {
+    transform: scale(0.9, 0.9)
+}
+
+
+/*Расчет стоимости*/
+
 .calculation {
     width: 100%;
     height: 835px;
@@ -331,6 +684,7 @@ nav {
     font-weight: bold;
     color: #1c2534;
     margin: 100px 0px 0px 800px;
+    transition: all 0.2s;
 }
 
 .cost_calculation-type {
@@ -351,7 +705,7 @@ nav {
     padding: 14px 26px;
 }
 
-.cost_calculation-design { 
+.cost_calculation-design {
     font-size: 25px;
     font-weight: 600;
     margin: 50px 0px 0px 500px;
@@ -398,6 +752,7 @@ nav {
     font-weight: 600;
     margin: 20px 0px 0px 500px;
 }
+
 .deadlines_0 {
     display: inline-block;
     font-size: 25px;
@@ -422,6 +777,28 @@ nav {
     margin: 20px 0px 0px 750px;
 }
 
+
+
+.cost_calculation h2:hover {
+    color: red;
+
+}
+
+.cost_calculation-type:hover {
+    color: red;
+}
+
+.cost_calculation-design:hover {
+    color: red;
+}
+
+.cost_calculation-adadtability:hover {
+    color: red;
+}
+
+
+/*НЕМНОГО СТАТИСТИКИ*/
+
 .some_statistics {
     width: 100%;
     height: 500px;
@@ -432,6 +809,8 @@ nav {
     height: 500px;
     background: url(../img/fon.jpg) center/100% 100% no-repeat;
     float: left;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .statistics h2 {
@@ -439,6 +818,7 @@ nav {
     font-weight: bold;
     color: #1c2534;
     margin: 100px 0px 0px 800px;
+    transition: all 0.2s;
 }
 
 .statistics-therta {
@@ -447,18 +827,30 @@ nav {
 
 .statistics_img1 {
     margin: 90px 0px 0px 495px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .statistics_img2 {
     margin: 90px 0px 0px 235px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .statistics_img3 {
     margin: 90px 0px 0px 235px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .statistics_img4 {
     margin: 90px 0px 0px 235px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .statistics_120 {
@@ -467,6 +859,7 @@ nav {
     font-weight: bold;
     margin: 30px 0px 0px 495px;
     color: #323e4f;
+    transition: all 0.3s;
 }
 
 .statistics_4600 {
@@ -475,6 +868,7 @@ nav {
     font-weight: bold;
     margin: 30px 0px 0px 230px;
     color: #323e4f;
+    transition: all 0.3s;
 }
 
 .statistics_340 {
@@ -483,6 +877,7 @@ nav {
     font-weight: bold;
     margin: 30px 0px 0px 230px;
     color: #323e4f;
+    transition: all 0.3s;
 }
 
 .statistics_23 {
@@ -491,6 +886,7 @@ nav {
     font-weight: bold;
     margin: 30px 0px 0px 255px;
     color: #323e4f;
+    transition: all 0.3s;
 }
 
 .statistics_small_1 {
@@ -529,6 +925,58 @@ nav {
     float: left;
 }
 
+.statistics h2:hover {
+    color: #f8a02b;
+}
+
+.statistics_img1:hover {
+    transform: rotate(360deg);
+
+}
+
+.statistics_img2:hover {
+    transform: skew(-20deg, -5deg);
+}
+
+.statistics_img3:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.statistics_img3:active {
+    transform: scale(1, 1);
+}
+
+.statistics_img4:hover {
+    transform: translate(0%, -30%);
+}
+
+.statistics_120:hover {
+    transform: scale(2, 2);
+    color: #d27f00;
+}
+
+.statistics_4600:hover {
+    transform: scale(2, 2);
+    color: #d27f00;
+}
+
+.statistics_340:hover {
+    transform: scale(2, 2);
+    color: #d27f00;
+}
+
+.statistics_23:hover {
+    transform: scale(2, 2);
+    color: #d27f00;
+}
+
+.reviews h2:hover {
+    color: #d27f00;
+}
+
+
+/*ОТЗЫВЫ*/
+
 .opinions {
     width: 100%;
     height: 590px;
@@ -546,6 +994,7 @@ nav {
     font-weight: bold;
     color: #1c2534;
     margin: 110px 0px 0px 900px;
+    transition: all 0.2s;
 }
 
 .reviews_therta {
@@ -554,6 +1003,9 @@ nav {
 
 .reviews_img1 {
     margin: 60px 0px 0px 920px;
+    -webkit-animation: img1 2s infinite linear alternate;
+    -o-animation: img1 2s infinite linear alternate;
+    animation: img1 2s infinite linear alternate;
 }
 
 .reviews h4 {
@@ -562,6 +1014,7 @@ nav {
     color: #92969d;
     text-align: center;
     margin: 35px 0px 0px 200px;
+    transition: all 0.3s;
 }
 
 .reviews_signature {
@@ -570,12 +1023,32 @@ nav {
     color: #92969d;
     text-align: center;
     margin: 35px 0px 0px 150px;
+    transition: all 0.3s;
 }
 
 .reviews_buttons {
     margin: 30px 0px 0px 950px;
     float: left;
 }
+
+@keyframes img1 {
+    to {
+        transform: rotate(30deg);
+    }
+}
+
+.reviews h4:hover {
+    color: #1c2534;
+    font-size: 22px;
+}
+
+.reviews_signature:hover {
+    color: #1c2534;
+    font-size: 22px;
+}
+
+
+/*МОИ КОНТАКТЫ*/
 
 .my_contacts {
     width: 100%;
@@ -595,10 +1068,11 @@ nav {
     color: #ffffff;
     font-size: 30px;
     font-weight: bold;
+    transition: all 0.2s;
 }
 
 .contacts_therta {
-    margin:  30px 0px 0px 930px;
+    margin: 30px 0px 0px 930px;
 }
 
 .contacts_text_1 {
@@ -609,14 +1083,23 @@ nav {
 
 .contacts_img1 {
     margin: 50px 0px 0px 700px;
+    -webkit-animation: contacts_img1 1s infinite alternate;
+    -o-animation: contacts_img1 1s infinite alternate;
+    animation: contacts_img1 1s infinite alternate;
 }
 
 .contacts_img2 {
     margin: 50px 0px 0px 220px;
+    -webkit-animation: contacts_img2 1s infinite alternate;
+    -o-animation: contacts_img2 1s infinite alternate;
+    animation: contacts_img2 1s infinite alternate;
 }
 
 .contacts_img3 {
     margin: 50px 0px 0px 220px;
+    -webkit-animation: contacts_img3 0.5s infinite alternate;
+    -o-animation: ;
+    animation: ;
 }
 
 .contacts_small-1 {
@@ -625,6 +1108,7 @@ nav {
     margin: 15px 0px 0px 655px;
     text-align: center;
     float: left;
+    transition: all 0.3s;
 }
 
 .contacts_small-2 {
@@ -633,6 +1117,7 @@ nav {
     margin: 15px 0px 0px 120px;
     text-align: center;
     float: left;
+    transition: all 0.3s;
 }
 
 .contacts_small-3 {
@@ -640,6 +1125,7 @@ nav {
     color: #fff;
     margin: 15px 0px 0px 140px;
     text-align: center;
+    transition: all 0.3s;
 }
 
 .contacts h4 {
@@ -693,50 +1179,190 @@ nav {
     padding: 15px 15px;
     font-weight: 500;
     margin: 30px 0px 0px 895px;
-    
+    transition: all 0.2s;
+    transform: scale(1);
+
+
 }
 
 .contacts_img-1 {
     margin: 55px 0px 0px 705px;
+    transition: all 0.3s;
 }
 
 .contacts_img-2 {
-    margin: 60px 0px 0px 46px;
+    margin: 60px 0px 0px 42px;
+    transition: all 0.3s;
 }
 
 .contacts_img-3 {
-    margin: 58px 0px 0px 46px;
+    margin: 58px 0px 0px 43px;
+    transition: all 0.3s;
 }
 
 .contacts_img-4 {
-    margin: 58px 0px 0px 42px;
+    margin: 58px 0px 0px 38px;
+    transition: all 0.3s;
 }
 
 .contacts_img-5 {
-    margin: 58px 0px 0px 45px;
+    margin: 58px 0px 0px 41px;
+    transition: all 0.3s;
 }
 
 .contacts_img-6 {
-    margin: 58px 0px 0px 45px;
+    margin: 58px 0px 0px 40px;
+    transition: all 0.3s;
 }
 
+.contacts h2:hover {
+    color: #f8a02b;
+}
+
+@keyframes contacts_img1 {
+    to {
+        transform: translate(0%, -50%);
+    }
+}
+
+@keyframes contacts_img2 {
+    from {
+        transform: translate(60%, 0%)
+    }
+
+    to {
+        transform: translate(-60%, 0%);
+    }
+}
+
+@keyframes contacts_img3 {
+    to {
+        transform: rotate(25deg);
+    }
+}
+
+.contacts_small-1:hover {
+    color: #f8a02b;
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_small-2:hover {
+    color: #f8a02b;
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_small-3:hover {
+    color: #f8a02b;
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_button:hover {
+    color: chartreuse;
+    background-color: #f8a02b;
+}
+
+.contacts_button:active {
+    color: #f8a02b;
+    background-color: chartreuse;
+    transform: scale(0.8, 0.8);
+}
+
+
+.contacts_img-1:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_img-1:active {
+    transform: scale(0.5, 0.5);
+}
+
+.contacts_img-2:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_img-2:active {
+    transform: scale(0.5, 0.5);
+}
+
+.contacts_img-3:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_img-3:active {
+    transform: scale(0.5, 0.5);
+}
+
+.contacts_img-4:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_img-4:active {
+    transform: scale(0.5, 0.5);
+}
+
+.contacts_img-5:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_img-5:active {
+    transform: scale(0.5, 0.5);
+}
+
+.contacts_img-6:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.contacts_img-6:active {
+    transform: scale(0.5, 0.5);
+}
+
+/*КАРТА*/
 .map {
     width: 100%;
     height: 350px;
 }
+
 .place {
     width: 100%;
     height: 100%;
     float: left;
     background: url(../img/%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C.png) 860px 50% no-repeat, url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) no-repeat;
 }
+
 .place_text {
     display: block;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 160px 0px 0px 890px;
+    -webkit-animation: place_text 1s alternate infinite;
+    -o-animation: place_text 1s alternate infinite;
+    animation: place_text 1s alternate infinite;
 }
+
+@keyframes place_text {
+    0% {
+        color: orange;
+    }
+
+    15% {
+        color: hotpink;
+    }
+
+    30% {
+        color: lawngreen;
+    }
+
+    60% {
+        color: blue;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+/*(подвал)*/
 
 footer {
     float: left;
@@ -745,7 +1371,8 @@ footer {
     background: #354051;
 }
 
-footer h5{
+
+footer h5 {
     font-size: 20px;
     text-align: center;
     margin-top: 40px;
