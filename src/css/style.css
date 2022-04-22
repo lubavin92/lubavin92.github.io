@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'FranklinGothic-Medium';
+  src: url(../'FranklinGothic-Medium.svg#FranklinGothic-Medium') format('svg'),
+       url(../'FranklinGothic-Medium.ttf') format('truetype'),
+       url(../'FranklinGothic-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 .preloader {
     /*фиксированное позиционирование*/
     position: fixed;
@@ -85,8 +96,8 @@ nav {
     color: #fff;
     font-size: 28px;
     line-height: 60px;
-    padding-left: 388px;
     float: left;
+    font-family: "FranklinGothic-Medium", sans-serif;
     -webkit-animation: comming 2s ease;
     -o-animation: comming 2s ease;
     animation: comming 2s ease;
@@ -94,7 +105,6 @@ nav {
 
 .menu {
     float: left;
-    padding-left: 432px;
 }
 
 .menu li {
@@ -102,12 +112,15 @@ nav {
     line-height: 60px;
     color: #fff;
     margin-right: 40px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     -webkit-animation: topshift 0.4s ease forwards;
     -o-animation: topshift 0.4s ease forwards;
     animation: topshift 0.4s ease forwards;
     opacity: 0;
+}
+.white-btn:visited{
+    color: white;
 }
 
 main {
@@ -123,9 +136,9 @@ main {
 
 .title_container {
     float: left;
-    margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    width: 100%;
     opacity: 0;
     -webkit-animation: titlemove 1s ease forwards;
     -o-animation: titlemove 1s ease forwards;
@@ -136,8 +149,13 @@ main {
 }
 
 .title_container h1 {
+    font-family: Arial, sans-serif;
     font-size: 60px;
     font-weight: bold;
+    z-index: 10;
+}
+.custom-css3{
+    font-size: 40px;
 }
 
 .title_container h4 {
@@ -145,6 +163,7 @@ main {
     font-size: 22px;
     color: #828995;
 }
+
 
 .title_container input {
     height: 40px;
@@ -163,6 +182,7 @@ main {
     color: white;
     transform: scale(1);
     display: inline-block;
+    text-decoration: none;
 }
 
 .menu li a:visited {
@@ -243,7 +263,30 @@ main {
 
     to {
         opacity: 1;
-        margin-left: 404px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 991px) {
+    .title_container h1, .title_container h4,.title_container input {
+        color: #fff;
+        position: relative;
+        z-index: 3;
+    }
+    .title_container input{
+        border: 2px solid #fff;
+    }
+    .main {
+        position: relative;
+    }
+    .main::after{
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.4);
+        z-index: 1;
     }
 }
 
@@ -251,52 +294,54 @@ main {
 
 .about me {
     width: 100%;
-    height: 720px;
+    height: 720px%;
 }
 
 .info {
     width: 100%;
     height: 720px;
+    background-size: cover;
     background: #fcfdfd;
     float: left;
 
 }
 
-.info h2 {
+.info-h2 {
     font-size: 30px;
-    font-weight: bold;
     color: #263244;
-    margin: 110px 0px 0px 896px;
     transition: all 0.2s;
+    margin-top: 110px;
+
 
 }
 
 .info-therta {
-    margin: 30px 0px 60px 925px;
+    margin-top: 30px;
 }
 
 .info-foto {
-    margin: 0px 0px 25px 862px;
+    margin-top: 60px;
     -webkit-animation: info-foto 3s alternate infinite;
     -o-animation: info-foto 3s alternate infinite;
     animation: info-foto 3s alternate infinite;
 }
 
 .info-text_1 {
+    margin-top: 30px;
     display: block;
-    margin-left: 650px;
-    font-size: 18px;
+    font-size: 13px;
     color: #80858f;
 }
 
 .info-text_2 {
+    margin-top: 40px;
     display: block;
-    margin: 45px 0px 0px 650px;
-    font-size: 18px;
+    font-size: 13px;
     color: #80858f;
 }
 
-.info input {
+.info-input {
+    margin-top: 30px;
     height: 30px;
     text-align: center;
     border: 2px solid #6f707e;
@@ -305,12 +350,11 @@ main {
     font-size: 15px;
     color: #6f707e;
     padding: 0px 10px;
-    margin: 31px 0px 0px 890px;
 
 }
 
 
-.info h2:hover {
+.info-h2:hover {
     color: #f8a02b;
 }
 
@@ -320,20 +364,19 @@ main {
     }
 }
 
-.info input {
+.info-input {
     transition: all 0.2s;
     transform: scale(1);
 }
 
-.info input:hover {
+.info-input:hover {
     background: #f8a02b;
     color: white;
 }
 
-.info input:active {
+.info-input:active {
     transform: scale(0.9, 0.9)
 }
-
 
 /*ЧТО Я УМЕЮ*/
 
@@ -350,7 +393,7 @@ main {
 }
 
 .ability h2 {
-    margin: 110px 0px 0px 870px;
+    
     font-size: 30px;
     font-weight: bold;
     transition: all 0.2s;
@@ -359,104 +402,109 @@ main {
 }
 
 .ability-therta {
-    margin: 30px 0px 0px 925px;
+    
 }
 
 .ability-img1 {
     display: inline-block;
-    margin: 110px 0px 0px 495px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
 }
 
 .ability-img2 {
     display: inline-block;
-    margin: 110px 0px 0px 240px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
 }
 
 .ability-img3 {
     display: inline-block;
-    margin: 110px 0px 0px 240px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
 }
 
 .ability-img4 {
     display: inline-block;
-    margin: 110px 0px 0px 240px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
 }
 
 .ability-web {
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #d17700;
-    margin: 40px 0px 0px 470px;
+    margin-top: 40px;
+    
 }
 
 .ability-Development {
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #d17700;
-    margin: 20px 0px 0px 180px;
+    margin-top: 40px;
+    
 }
 
 .ability-optimization {
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #d17700;
-    margin: 20px 0px 0px 140px;
+    margin-top: 40px;
+   
 }
 
 .ability-marketing {
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #d17700;
-    margin: 20px 0px 0px 140px;
+    margin-top: 40px;
+    
+    
 }
 
 .ability-small-1 {
     float: left;
-    font-size: 15px;
+    font-size: 12.5px;
     color: #80858f;
     margin-top: 20px;
     text-align: center;
-    margin: 25px 0px 0px 400px;
+    
     line-height: 20px;
 }
 
 .ability-small-2 {
     float: left;
-    font-size: 15px;
+    font-size: 12.5px;
     color: #80858f;
-    margin: 25px 0px 0px 70px;
+    margin-top: 20px;
     text-align: center;
     line-height: 20px;
 }
 
 .ability-small-3 {
     float: left;
-    font-size: 15px;
+    font-size: 12.5px;
     color: #80858f;
     text-align: center;
     line-height: 20px;
-    margin: 25px 0px 0px 50px;
+    margin-top: 20px;
 }
 
 .ability-small-4 {
     float: left;
-    font-size: 15px;
+    font-size: 12.5px;
     color: #80858f;
     text-align: center;
     line-height: 20px;
-    margin: 25px 0px 0px 50px;
+    margin-top: 20px;
 }
 
 
@@ -556,7 +604,7 @@ main {
 
 .collection {
     width: 100%;
-    height: 1180px;
+    height: 1300px;
     float: left;
 }
 
@@ -568,19 +616,16 @@ main {
 }
 
 .cases h2 {
-    margin: 110px 0px 0px 870px;
-    font-size: 30px;
     font-weight: bold;
     transition: all 0.2s;
 }
 
 .cases-therta {
-    margin: 30px 0px 0px 890px;
 }
 
 .cases-small-1 {
     display: block;
-    font-size: 15px;
+    font-size: 12.5px;
     text-align: center;
     margin-top: 40px;
     color: #626976;
@@ -588,44 +633,47 @@ main {
 
 .cases-img {
     width: 100%;
-    height: 920px;
-    background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B01.png) 10px 30px/1500px 900px no-repeat;
+    height: 600px;
+    background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B01.png) center center/100% 600px no-repeat;
     float: left;
-
+    
 }
 
 .cases-client {
     display: inline-block;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 700px 0px 0px 388px;
-    color: #384354;
+    color: #3f495a;
+    float: left;
+    
 }
+    
 
 .cases-small-2 {
     font-size: 15px;
     color: #3f495a;
+    float: left;
 }
 
 .cases-small-3 {
     font-size: 15px;
     color: #3f495a;
+    float: left;
 }
 
 .project_name {
     display: inline-block;
-    margin: 700px 0px 0px 100px;
-    font-size: 25px;
-    font-weight: bold;
     color: #384354;
+    float: left;
+
+    
 }
 
 .cases-small-4 {
     font-size: 15px;
     color: #3f495a;
+    float: left;
 }
 
-.cases input {
+.cases_input {
     height: 50px;
     text-align: center;
     border: 1px solid #63b5ae;
@@ -633,8 +681,9 @@ main {
     padding: 15px 40px;
     background-color: #63b5ae;
     color: #fff;
-    font-size: 18px;
-    margin: 25px 0px 0px 388px;
+    font-size: 14px;
+    float: left;
+   
 }
 
 
@@ -650,131 +699,160 @@ main {
     color: #f8a02b;
 }
 
-.cases input {
+.cases_input {
     transition: all 0.2s;
     transform: scale(1);
 }
 
-.cases input:hover {
+.cases_input:hover {
     color: white;
 }
 
-.cases input:active {
+.cases_input:active {
     transform: scale(0.9, 0.9)
 }
+
 
 
 /*Расчет стоимости*/
 
 .calculation {
     width: 100%;
-    height: 835px;
+    height: 750px;
     float: left;
 }
 
 .cost_calculation {
     width: 100%;
-    height: 835px;
+    height: 750px;
     background-color: #ffffff;
     float: left;
+   
+}
+.cost_calculation_box{
+    width: 975px;
+    height: 675px;
+    border: 1px solid #000;
+    float: left;
+    box-shadow: 1px 1px 5px #000;
+    
 }
 
 .cost_calculation h2 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     color: #1c2534;
-    margin: 100px 0px 0px 800px;
     transition: all 0.2s;
+    padding-top: 40px;
+    
 }
 
 .cost_calculation-type {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    margin: 50px 0px 0px 500px;
+    margin-top: 50px;   
 }
 
 #list1 {
-    margin: 20px 0px 0px 500px;
     border: 1px solid #eeeeee;
-    height: 55px;
-    width: 900px;
+    height: 40px;
+    width: 810px;
     background-color: #eeeeee;
     text-align: left;
-    font-size: 18px;
+    font-size: 12.5px;
     color: #737373;
-    padding: 14px 26px;
+    padding: 10px 26px;
+    margin-top: 15px;
+   
+    
+    
 }
 
 .cost_calculation-design {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    margin: 50px 0px 0px 500px;
+    margin-top: 30px;
+    
+    
 }
 
 #list2 {
-    margin: 20px 0px 0px 500px;
+    margin-top: 15px;
     border: 1px solid #eeeeee;
-    height: 55px;
-    width: 900px;
+    height: 40px;
+    width: 810px;
     background-color: #eeeeee;
     text-align: left;
-    font-size: 18px;
+    font-size: 12.5px;
     color: #737373;
-    padding: 14px 26px;
+    padding: 10px 26px;
+    
+    
 }
 
 .cost_calculation-adadtability {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    margin: 50px 0px 0px 500px;
+    margin-top: 30px;
+    
+    
 }
 
 #list3 {
-    margin: 20px 0px 0px 500px;
+    margin-top: 15px;
     border: 1px solid #eeeeee;
-    height: 55px;
-    width: 900px;
+    height: 40px;
+    width: 810px;
     background-color: #eeeeee;
     text-align: left;
-    font-size: 18px;
+    font-size: 12.5px;
     color: #737373;
-    padding: 14px 26px;
+    padding: 10px 26px;
+    
+    
 }
 
 .line {
-    margin: 35px 0px 0px 500px;
+    margin-top: 20px;
+   
 }
 
 .deadlines {
     display: inline-block;
     color: #1c2534;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 600;
-    margin: 20px 0px 0px 500px;
+    float: left;
+    margin-top: 20px;
+    
+    
 }
 
 .deadlines_0 {
     display: inline-block;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 600;
     color: #1c2534;
-    margin: 20px 0px 0px 810px;
+    float: left;
+    margin-top: 20px;
 }
 
 .cost {
     display: inline-block;
     color: #1c2534;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 600;
-    margin: 20px 0px 0px 500px;
+    float: left;
+    
 }
 
 .cost_0 {
     display: inline-block;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 600;
     color: #1c2534;
-    margin: 20px 0px 0px 750px;
+    float: left;
+    
 }
 
 
@@ -796,58 +874,55 @@ main {
     color: red;
 }
 
-
 /*НЕМНОГО СТАТИСТИКИ*/
 
 .some_statistics {
     width: 100%;
-    height: 500px;
+    height: 450px;
 }
 
 .statistics {
     width: 100%;
-    height: 500px;
+    height: 450px;
     background: url(../img/fon.jpg) center/100% 100% no-repeat;
     float: left;
     background-attachment: fixed;
     background-size: cover;
 }
-
-.statistics h2 {
-    font-size: 30px;
-    font-weight: bold;
+.statistics_h2 {
+    font-size: 25px;
     color: #1c2534;
-    margin: 100px 0px 0px 800px;
     transition: all 0.2s;
+    margin-top: 100px;
+    
 }
 
 .statistics-therta {
-    margin: 30px 0px 0px 925px;
 }
 
 .statistics_img1 {
-    margin: 90px 0px 0px 495px;
+    margin-top: 90px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .statistics_img2 {
-    margin: 90px 0px 0px 235px;
+    margin-top: 90px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .statistics_img3 {
-    margin: 90px 0px 0px 235px;
+   margin-top: 90px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .statistics_img4 {
-    margin: 90px 0px 0px 235px;
+   margin-top: 90px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
@@ -857,25 +932,25 @@ main {
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    margin: 30px 0px 0px 495px;
     color: #323e4f;
     transition: all 0.3s;
+    margin-top: 32px;
 }
 
 .statistics_4600 {
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    margin: 30px 0px 0px 230px;
     color: #323e4f;
     transition: all 0.3s;
+    margin-top: 32px;
 }
 
 .statistics_340 {
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    margin: 30px 0px 0px 230px;
+    margin-top: 32px;
     color: #323e4f;
     transition: all 0.3s;
 }
@@ -884,15 +959,15 @@ main {
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    margin: 30px 0px 0px 255px;
+    margin-top: 32px;
     color: #323e4f;
     transition: all 0.3s;
 }
 
 .statistics_small_1 {
     display: inline-block;
-    font-size: 18px;
-    margin: 40px 0px 0px 400px;
+    font-size: 15px;
+    
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -900,8 +975,8 @@ main {
 
 .statistics_small_2 {
     display: inline-block;
-    font-size: 18px;
-    margin: 40px 0px 0px 110px;
+    font-size: 15px;
+    
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -909,8 +984,8 @@ main {
 
 .statistics_small_3 {
     display: inline-block;
-    font-size: 18px;
-    margin: 40px 0px 0px 110px;
+    font-size: 15px;
+    
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -918,14 +993,14 @@ main {
 
 .statistics_small_4 {
     display: inline-block;
-    font-size: 18px;
-    margin: 40px 0px 0px 110px;
+    font-size: 15px;
+    
     color: #323e4f;
     font-weight: 600;
     float: left;
 }
 
-.statistics h2:hover {
+.statistics_h2:hover {
     color: #f8a02b;
 }
 
@@ -970,7 +1045,7 @@ main {
     color: #d27f00;
 }
 
-.reviews h2:hover {
+.reviews statistics_h2:hover {
     color: #d27f00;
 }
 
@@ -984,51 +1059,46 @@ main {
 
 .reviews {
     width: 100%;
-    height: 100%;
+    height: 590px;
     background-color: #fff;
     float: left;
 }
-
-.reviews h2 {
-    font-size: 30px;
-    font-weight: bold;
+.reviews_h2 {
+    font-size: 25px;
     color: #1c2534;
-    margin: 110px 0px 0px 900px;
+    margin-top: 110px;
     transition: all 0.2s;
 }
 
 .reviews_therta {
-    margin: 30px 0px 0px 935px;
+    margin-top: 30px;
 }
-
 .reviews_img1 {
-    margin: 60px 0px 0px 920px;
+    margin-top: 60px;
     -webkit-animation: img1 2s infinite linear alternate;
     -o-animation: img1 2s infinite linear alternate;
     animation: img1 2s infinite linear alternate;
 }
-
-.reviews h4 {
+.reviews_h4 {
     display: block;
-    font-size: 20px;
+    font-size: 12.5px;
     color: #92969d;
     text-align: center;
-    margin: 35px 0px 0px 200px;
+    margin-top: 35px;
     transition: all 0.3s;
 }
-
 .reviews_signature {
     display: block;
-    font-size: 20px;
+    font-size: 12.5px;
     color: #92969d;
     text-align: center;
-    margin: 35px 0px 0px 150px;
+    margin-top: 35px;
     transition: all 0.3s;
 }
-
-.reviews_buttons {
-    margin: 30px 0px 0px 950px;
+.reviews_form{
+    margin-top: 30px;
     float: left;
+    text-align: center;
 }
 
 @keyframes img1 {
@@ -1037,135 +1107,125 @@ main {
     }
 }
 
-.reviews h4:hover {
+.reviews_h4:hover {
     color: #1c2534;
-    font-size: 22px;
+    font-size: 15px;
 }
 
 .reviews_signature:hover {
     color: #1c2534;
-    font-size: 22px;
+    font-size: 15px;
 }
-
 
 /*МОИ КОНТАКТЫ*/
 
 .my_contacts {
     width: 100%;
-    height: 800px;
+    height: 750px;
     float: left;
 }
 
 .contacts {
     width: 100%;
-    height: 800px;
+    height: 750px;
     background: url(../img/tfon.jpg) center/100% 100% no-repeat;
     float: left;
+    background-attachment:local;
 }
 
-.contacts h2 {
-    margin: 100px 0px 0px 850px;
+.contacts_h2 {
+    margin-top: 60px;
     color: #ffffff;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
     transition: all 0.2s;
 }
 
-.contacts_therta {
-    margin: 30px 0px 0px 930px;
-}
 
 .contacts_text_1 {
     display: block;
     color: #ffffff;
-    margin: 30px 0px 0px 670px;
+    margin-top: 20px;
+    font-size: 12.5px;
 }
-
 .contacts_img1 {
-    margin: 50px 0px 0px 700px;
+    margin-top: 30px;
     -webkit-animation: contacts_img1 1s infinite alternate;
     -o-animation: contacts_img1 1s infinite alternate;
     animation: contacts_img1 1s infinite alternate;
 }
 
 .contacts_img2 {
-    margin: 50px 0px 0px 220px;
+    margin-top: 30px;
     -webkit-animation: contacts_img2 1s infinite alternate;
     -o-animation: contacts_img2 1s infinite alternate;
     animation: contacts_img2 1s infinite alternate;
 }
 
 .contacts_img3 {
-    margin: 50px 0px 0px 220px;
+    margin-top: 30px;
     -webkit-animation: contacts_img3 0.5s infinite alternate;
-    -o-animation: ;
-    animation: ;
+    -o-animation: contacts_img3 0.5s infinite alternate;
+    animation: contacts_img3 0.5s infinite alternate;
 }
 
 .contacts_small-1 {
     display: inline-block;
     color: #fff;
-    margin: 15px 0px 0px 655px;
-    text-align: center;
-    float: left;
+    margin-top: 15px;
     transition: all 0.3s;
 }
 
 .contacts_small-2 {
     display: inline-block;
     color: #fff;
-    margin: 15px 0px 0px 120px;
-    text-align: center;
-    float: left;
+    margin-top: 15px;
     transition: all 0.3s;
 }
 
 .contacts_small-3 {
     display: inline-block;
     color: #fff;
-    margin: 15px 0px 0px 140px;
-    text-align: center;
+    margin-top: 15px;
     transition: all 0.3s;
 }
 
-.contacts h4 {
+.contacts_h4 {
     color: #fff;
     display: block;
-    font-size: 25px;
-    margin: 30px 0px 0px 790px;
+    font-size: 15px;
+    margin-top: 20px;
 }
 
 .contacts_name {
     height: 35px;
-    width: 350px;
     text-align: left;
-    font-size: 20px;
+    font-size: 12.5px;
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
-    margin: 45px 0px 0px 595px;
     padding: 10px 12px;
+    
 }
 
 .contact_e-mail {
     height: 35px;
-    width: 350px;
     text-align: left;
-    font-size: 20px;
+    font-size: 12.5px;
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
     padding: 10px 12px;
-    margin-left: 30px;
+    margin-left: 25px;
+
 }
 
 .contacts_message {
     height: 95px;
-    width: 730px;
     text-align: left;
-    font-size: 20px;
+    font-size: 12.5px;
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
-    margin: 15px 0px 0px 595px;
     padding: 10px 12px;
+    margin-top: 20px;
+   
 }
 
 .contacts_button {
@@ -1176,15 +1236,14 @@ main {
     color: #fff;
     text-align: center;
     font-size: 20px;
-    padding: 15px 15px;
+    padding: 8px 15px;
     font-weight: 500;
-    margin: 30px 0px 0px 895px;
+    margin-top: 30px;
     transition: all 0.2s;
     transform: scale(1);
-
-
 }
 
+}
 .contacts_img-1 {
     margin: 55px 0px 0px 705px;
     transition: all 0.3s;
@@ -1267,55 +1326,6 @@ main {
     transform: scale(0.8, 0.8);
 }
 
-
-.contacts_img-1:hover {
-    transform: scale(1.5, 1.5);
-}
-
-.contacts_img-1:active {
-    transform: scale(0.5, 0.5);
-}
-
-.contacts_img-2:hover {
-    transform: scale(1.5, 1.5);
-}
-
-.contacts_img-2:active {
-    transform: scale(0.5, 0.5);
-}
-
-.contacts_img-3:hover {
-    transform: scale(1.5, 1.5);
-}
-
-.contacts_img-3:active {
-    transform: scale(0.5, 0.5);
-}
-
-.contacts_img-4:hover {
-    transform: scale(1.5, 1.5);
-}
-
-.contacts_img-4:active {
-    transform: scale(0.5, 0.5);
-}
-
-.contacts_img-5:hover {
-    transform: scale(1.5, 1.5);
-}
-
-.contacts_img-5:active {
-    transform: scale(0.5, 0.5);
-}
-
-.contacts_img-6:hover {
-    transform: scale(1.5, 1.5);
-}
-
-.contacts_img-6:active {
-    transform: scale(0.5, 0.5);
-}
-
 /*КАРТА*/
 .map {
     width: 100%;
@@ -1324,20 +1334,23 @@ main {
 
 .place {
     width: 100%;
-    height: 100%;
+    height: 350px;
     float: left;
-    background: url(../img/%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C.png) 860px 50% no-repeat, url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) no-repeat;
+    background: url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) no-repeat;
+    
 }
 
 .place_text {
     display: block;
-    font-size: 20px;
+    font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 160px 0px 0px 890px;
     -webkit-animation: place_text 1s alternate infinite;
     -o-animation: place_text 1s alternate infinite;
     animation: place_text 1s alternate infinite;
+  margin-top: 150px;
+    
+    
 }
 
 @keyframes place_text {
@@ -1372,9 +1385,14 @@ footer {
 }
 
 
-footer h5 {
-    font-size: 20px;
+.footer_h5 {
+    font-size: 12.5px;
     text-align: center;
     margin-top: 40px;
     color: #fff;
 }
+
+
+
+
+
