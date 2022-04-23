@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'FranklinGothic-Medium';
-  src: url(../'FranklinGothic-Medium.svg#FranklinGothic-Medium') format('svg'),
-       url(../'FranklinGothic-Medium.ttf') format('truetype'),
-       url(../'FranklinGothic-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'FranklinGothic-Medium';
+    src: url(../'FranklinGothic-Medium.svg#FranklinGothic-Medium') format('svg'),
+        url(../'FranklinGothic-Medium.ttf') format('truetype'),
+        url(../'FranklinGothic-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -119,7 +119,8 @@ nav {
     animation: topshift 0.4s ease forwards;
     opacity: 0;
 }
-.white-btn:visited{
+
+.white-btn:visited {
     color: white;
 }
 
@@ -154,7 +155,8 @@ main {
     font-weight: bold;
     z-index: 10;
 }
-.custom-css3{
+
+.custom-css3 {
     font-size: 40px;
 }
 
@@ -266,26 +268,33 @@ main {
         margin-left: 0px;
     }
 }
+
 @media (max-width: 991px) {
-    .title_container h1, .title_container h4,.title_container input {
+
+    .title_container h1,
+    .title_container h4,
+    .title_container input {
         color: #fff;
         position: relative;
         z-index: 3;
     }
-    .title_container input{
+
+    .title_container input {
         border: 2px solid #fff;
     }
+
     .main {
         position: relative;
     }
-    .main::after{
+
+    .main::after {
         content: "";
         bottom: 0;
         top: 0;
         left: 0;
         right: 0;
         position: absolute;
-        background: rgba(0,0,0,0.4);
+        background: rgba(0, 0, 0, 0.4);
         z-index: 1;
     }
 }
@@ -393,7 +402,7 @@ main {
 }
 
 .ability h2 {
-    
+
     font-size: 30px;
     font-weight: bold;
     transition: all 0.2s;
@@ -401,9 +410,7 @@ main {
 
 }
 
-.ability-therta {
-    
-}
+.ability-therta {}
 
 .ability-img1 {
     display: inline-block;
@@ -439,7 +446,7 @@ main {
     font-weight: 700;
     color: #d17700;
     margin-top: 40px;
-    
+
 }
 
 .ability-Development {
@@ -448,7 +455,7 @@ main {
     font-weight: 700;
     color: #d17700;
     margin-top: 40px;
-    
+
 }
 
 .ability-optimization {
@@ -457,7 +464,7 @@ main {
     font-weight: 700;
     color: #d17700;
     margin-top: 40px;
-   
+
 }
 
 .ability-marketing {
@@ -466,8 +473,8 @@ main {
     font-weight: 700;
     color: #d17700;
     margin-top: 40px;
-    
-    
+
+
 }
 
 .ability-small-1 {
@@ -476,7 +483,7 @@ main {
     color: #80858f;
     margin-top: 20px;
     text-align: center;
-    
+
     line-height: 20px;
 }
 
@@ -620,8 +627,7 @@ main {
     transition: all 0.2s;
 }
 
-.cases-therta {
-}
+.cases-therta {}
 
 .cases-small-1 {
     display: block;
@@ -636,16 +642,16 @@ main {
     height: 600px;
     background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B01.png) center center/100% 600px no-repeat;
     float: left;
-    
+
 }
 
 .cases-client {
     display: inline-block;
     color: #3f495a;
     float: left;
-    
+
 }
-    
+
 
 .cases-small-2 {
     font-size: 15px;
@@ -664,7 +670,7 @@ main {
     color: #384354;
     float: left;
 
-    
+
 }
 
 .cases-small-4 {
@@ -683,7 +689,7 @@ main {
     color: #fff;
     font-size: 14px;
     float: left;
-   
+
 }
 
 
@@ -727,15 +733,19 @@ main {
     height: 750px;
     background-color: #ffffff;
     float: left;
-   
+
 }
-.cost_calculation_box{
+
+.cost_calculation_box {
+
     width: 975px;
     height: 675px;
     border: 1px solid #000;
     float: left;
     box-shadow: 1px 1px 5px #000;
-    
+    max-width: 100%;
+
+
 }
 
 .cost_calculation h2 {
@@ -743,78 +753,78 @@ main {
     font-weight: bold;
     color: #1c2534;
     transition: all 0.2s;
-    padding-top: 40px;
-    
+    padding-top: 20px;
+
 }
 
 .cost_calculation-type {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 50px;   
+    margin-top: 20px;
 }
 
 #list1 {
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 810px;
+    width: 350px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
     color: #737373;
     padding: 10px 26px;
     margin-top: 15px;
-   
-    
-    
+
+
+
 }
 
 .cost_calculation-design {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 30px;
-    
-    
+    margin-top: 20px;
+
+
 }
 
 #list2 {
     margin-top: 15px;
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 810px;
+    width: 350px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
     color: #737373;
     padding: 10px 26px;
-    
-    
+
+
 }
 
 .cost_calculation-adadtability {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 30px;
-    
-    
+    margin-top: 20px;
+
+
 }
 
 #list3 {
     margin-top: 15px;
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 810px;
+    width: 350px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
     color: #737373;
     padding: 10px 26px;
-    
-    
+
+
 }
 
 .line {
     margin-top: 20px;
-   
+
 }
 
 .deadlines {
@@ -824,8 +834,8 @@ main {
     font-weight: 600;
     float: left;
     margin-top: 20px;
-    
-    
+
+
 }
 
 .deadlines_0 {
@@ -843,7 +853,7 @@ main {
     font-size: 15px;
     font-weight: 600;
     float: left;
-    
+
 }
 
 .cost_0 {
@@ -852,7 +862,7 @@ main {
     font-weight: 600;
     color: #1c2534;
     float: left;
-    
+
 }
 
 
@@ -889,16 +899,16 @@ main {
     background-attachment: fixed;
     background-size: cover;
 }
+
 .statistics_h2 {
     font-size: 25px;
     color: #1c2534;
     transition: all 0.2s;
     margin-top: 100px;
-    
+
 }
 
-.statistics-therta {
-}
+.statistics-therta {}
 
 .statistics_img1 {
     margin-top: 90px;
@@ -915,14 +925,14 @@ main {
 }
 
 .statistics_img3 {
-   margin-top: 90px;
+    margin-top: 90px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .statistics_img4 {
-   margin-top: 90px;
+    margin-top: 90px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
@@ -967,7 +977,7 @@ main {
 .statistics_small_1 {
     display: inline-block;
     font-size: 15px;
-    
+
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -976,7 +986,7 @@ main {
 .statistics_small_2 {
     display: inline-block;
     font-size: 15px;
-    
+
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -985,7 +995,7 @@ main {
 .statistics_small_3 {
     display: inline-block;
     font-size: 15px;
-    
+
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -994,7 +1004,7 @@ main {
 .statistics_small_4 {
     display: inline-block;
     font-size: 15px;
-    
+
     color: #323e4f;
     font-weight: 600;
     float: left;
@@ -1063,6 +1073,7 @@ main {
     background-color: #fff;
     float: left;
 }
+
 .reviews_h2 {
     font-size: 25px;
     color: #1c2534;
@@ -1073,12 +1084,14 @@ main {
 .reviews_therta {
     margin-top: 30px;
 }
+
 .reviews_img1 {
     margin-top: 60px;
     -webkit-animation: img1 2s infinite linear alternate;
     -o-animation: img1 2s infinite linear alternate;
     animation: img1 2s infinite linear alternate;
 }
+
 .reviews_h4 {
     display: block;
     font-size: 12.5px;
@@ -1087,6 +1100,7 @@ main {
     margin-top: 35px;
     transition: all 0.3s;
 }
+
 .reviews_signature {
     display: block;
     font-size: 12.5px;
@@ -1095,7 +1109,8 @@ main {
     margin-top: 35px;
     transition: all 0.3s;
 }
-.reviews_form{
+
+.reviews_form {
     margin-top: 30px;
     float: left;
     text-align: center;
@@ -1130,7 +1145,7 @@ main {
     height: 750px;
     background: url(../img/tfon.jpg) center/100% 100% no-repeat;
     float: left;
-    background-attachment:local;
+    background-attachment: local;
 }
 
 .contacts_h2 {
@@ -1147,6 +1162,7 @@ main {
     margin-top: 20px;
     font-size: 12.5px;
 }
+
 .contacts_img1 {
     margin-top: 30px;
     -webkit-animation: contacts_img1 1s infinite alternate;
@@ -1203,7 +1219,7 @@ main {
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
     padding: 10px 12px;
-    
+
 }
 
 .contact_e-mail {
@@ -1225,7 +1241,7 @@ main {
     background-color: rgba(210, 214, 220, 0.8);
     padding: 10px 12px;
     margin-top: 20px;
-   
+
 }
 
 .contacts_button {
@@ -1244,6 +1260,7 @@ main {
 }
 
 }
+
 .contacts_img-1 {
     margin: 55px 0px 0px 705px;
     transition: all 0.3s;
@@ -1329,16 +1346,23 @@ main {
 /*КАРТА*/
 .map {
     width: 100%;
-    height: 350px;
+    height: 250px;
+    
+
 }
 
 .place {
     width: 100%;
-    height: 350px;
-    float: left;
+    height: 250px;
     background: url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) no-repeat;
-    
+    float: left;
+    background-size: contain;
+    max-height: 100%;
+
+
 }
+
+
 
 .place_text {
     display: block;
@@ -1348,9 +1372,7 @@ main {
     -webkit-animation: place_text 1s alternate infinite;
     -o-animation: place_text 1s alternate infinite;
     animation: place_text 1s alternate infinite;
-  margin-top: 150px;
-    
-    
+    margin-top: 50px;
 }
 
 @keyframes place_text {
@@ -1391,8 +1413,3 @@ footer {
     margin-top: 40px;
     color: #fff;
 }
-
-
-
-
-
