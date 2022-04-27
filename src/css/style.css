@@ -89,7 +89,7 @@ nav {
     height: 60px;
     background: #344051;
     position: fixed;
-    z-index: 101;
+    z-index: 11111;
 }
 
 .logo {
@@ -151,7 +151,7 @@ main {
 
 .title_container h1 {
     font-family: Arial, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     z-index: 10;
 }
@@ -312,6 +312,7 @@ main {
     background-size: cover;
     background: #fcfdfd;
     float: left;
+    max-height: 100%;
 
 }
 
@@ -319,24 +320,24 @@ main {
     font-size: 30px;
     color: #263244;
     transition: all 0.2s;
-    margin-top: 110px;
+    margin-top: 80px;
 
 
 }
 
 .info-therta {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .info-foto {
-    margin-top: 60px;
+    margin-top: 50px;
     -webkit-animation: info-foto 3s alternate infinite;
     -o-animation: info-foto 3s alternate infinite;
     animation: info-foto 3s alternate infinite;
 }
 
 .info-text_1 {
-    margin-top: 30px;
+    margin-top: 20px;
     display: block;
     font-size: 13px;
     color: #80858f;
@@ -401,10 +402,9 @@ main {
     float: left;
 }
 
-.ability h2 {
-
+.ability-h2 {
+    margin-top: 40px;
     font-size: 30px;
-    font-weight: bold;
     transition: all 0.2s;
 
 
@@ -414,65 +414,71 @@ main {
 
 .ability-img1 {
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: all 0.2s;
     transform: scale(1);
+   
 }
 
 .ability-img2 {
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: all 0.2s;
     transform: scale(1);
+    
 }
 
 .ability-img3 {
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: all 0.2s;
     transform: scale(1);
+    
 }
 
 .ability-img4 {
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 30px;
     transition: all 0.2s;
     transform: scale(1);
+    
 }
 
 .ability-web {
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #d17700;
-    margin-top: 40px;
+    margin-top: 30px;
+   
 
 }
 
 .ability-Development {
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #d17700;
-    margin-top: 40px;
+    margin-top: 30px;
+   
 
 }
 
 .ability-optimization {
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #d17700;
-    margin-top: 40px;
+    margin-top: 20px;
 
 }
 
 .ability-marketing {
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #d17700;
-    margin-top: 40px;
+    margin-top: 30px;
 
 
 }
@@ -481,9 +487,8 @@ main {
     float: left;
     font-size: 12.5px;
     color: #80858f;
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
-
     line-height: 20px;
 }
 
@@ -491,7 +496,7 @@ main {
     float: left;
     font-size: 12.5px;
     color: #80858f;
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
     line-height: 20px;
 }
@@ -501,7 +506,7 @@ main {
     font-size: 12.5px;
     color: #80858f;
     text-align: center;
-    line-height: 20px;
+    line-height: 15px;
     margin-top: 20px;
 }
 
@@ -510,7 +515,7 @@ main {
     font-size: 12.5px;
     color: #80858f;
     text-align: center;
-    line-height: 20px;
+    line-height: 15px;
     margin-top: 20px;
 }
 
@@ -767,13 +772,14 @@ main {
 #list1 {
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 400px;
+    width: 300px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
     color: #737373;
     padding: 10px 26px;
     margin-top: 15px;
+    max-width: 100%;
 
 
 
@@ -791,12 +797,13 @@ main {
     margin-top: 15px;
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 400px;
+    width: 300px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
     color: #737373;
     padding: 10px 26px;
+    max-width: 100%;
 
 
 }
@@ -813,12 +820,13 @@ main {
     margin-top: 15px;
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 400px;
+    width: 300px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
     color: #737373;
     padding: 10px 26px;
+    max-width: 100%;
 
 
 }
@@ -894,7 +902,7 @@ main {
 
 .statistics {
     width: 100%;
-    height: 450px;
+    
     background: url(../img/fon.jpg) center/100% 100% no-repeat;
     float: left;
     background-attachment: fixed;
@@ -1078,7 +1086,7 @@ main {
 .reviews_h2 {
     font-size: 25px;
     color: #1c2534;
-    margin-top: 110px;
+    margin-top: 90px;
     transition: all 0.2s;
 }
 
@@ -1137,16 +1145,17 @@ main {
 
 .my_contacts {
     width: 100%;
-    height: 750px;
+    height: 800px;
     float: left;
 }
 
 .contacts {
     width: 100%;
-    height: 750px;
+    height: 800px;
     background: url(../img/tfon.jpg) center/100% 100% no-repeat;
     float: left;
     background-attachment: local;
+   
 }
 
 .contacts_h2 {
@@ -1160,57 +1169,63 @@ main {
 .contacts_text_1 {
     display: block;
     color: #ffffff;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 12.5px;
 }
 
 .contacts_img1 {
-    margin-top: 30px;
+    margin-top: 15px;
     -webkit-animation: contacts_img1 1s infinite alternate;
     -o-animation: contacts_img1 1s infinite alternate;
     animation: contacts_img1 1s infinite alternate;
+    max-width: 100%;
 }
 
 .contacts_img2 {
-    margin-top: 30px;
+    margin-top: 15px;
     -webkit-animation: contacts_img2 1s infinite alternate;
     -o-animation: contacts_img2 1s infinite alternate;
     animation: contacts_img2 1s infinite alternate;
+    max-width: 100%;
 }
 
 .contacts_img3 {
-    margin-top: 30px;
+    margin-top: 15px;
     -webkit-animation: contacts_img3 0.5s infinite alternate;
     -o-animation: contacts_img3 0.5s infinite alternate;
     animation: contacts_img3 0.5s infinite alternate;
+    max-width: 100%;
 }
 
 .contacts_small-1 {
     display: inline-block;
     color: #fff;
-    margin-top: 15px;
+    margin-top: 10px;
     transition: all 0.3s;
+    max-width: 100%;
 }
 
 .contacts_small-2 {
     display: inline-block;
     color: #fff;
-    margin-top: 15px;
+    margin-top: 10px;
     transition: all 0.3s;
+    max-width: 100%;
 }
 
 .contacts_small-3 {
     display: inline-block;
     color: #fff;
-    margin-top: 15px;
+    margin-top: 10px;
     transition: all 0.3s;
+    max-width: 100%;
 }
 
 .contacts_h4 {
     color: #fff;
     display: block;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .contacts_name {
@@ -1220,6 +1235,7 @@ main {
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
     padding: 10px 12px;
+    max-width: 100%;
 
 }
 
@@ -1230,7 +1246,9 @@ main {
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
     padding: 10px 12px;
-    margin-left: 25px;
+    max-width: 100%;
+    margin-top: 10px;
+    
 
 }
 
@@ -1241,7 +1259,8 @@ main {
     border: 1px solid rgba(210, 214, 220, 0.8);
     background-color: rgba(210, 214, 220, 0.8);
     padding: 10px 12px;
-    margin-top: 20px;
+    margin-top: 10px;
+    max-width: 100%;
 
 }
 
@@ -1255,42 +1274,13 @@ main {
     font-size: 20px;
     padding: 8px 15px;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 10px;
     transition: all 0.2s;
     transform: scale(1);
 }
 
-}
 
-.contacts_img-1 {
-    margin: 55px 0px 0px 705px;
-    transition: all 0.3s;
-}
 
-.contacts_img-2 {
-    margin: 60px 0px 0px 42px;
-    transition: all 0.3s;
-}
-
-.contacts_img-3 {
-    margin: 58px 0px 0px 43px;
-    transition: all 0.3s;
-}
-
-.contacts_img-4 {
-    margin: 58px 0px 0px 38px;
-    transition: all 0.3s;
-}
-
-.contacts_img-5 {
-    margin: 58px 0px 0px 41px;
-    transition: all 0.3s;
-}
-
-.contacts_img-6 {
-    margin: 58px 0px 0px 40px;
-    transition: all 0.3s;
-}
 
 .contacts h2:hover {
     color: #f8a02b;
@@ -1347,15 +1337,16 @@ main {
 /*КАРТА*/
 .map {
     width: 100%;
-    height: 250px;
+    max-height: 100%;
+   
     
 
 }
 
 .place {
     width: 100%;
-    height: 250px;
-    background: url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) no-repeat;
+    height: 190px;
+    background: url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) center/100% 100% no-repeat;
     float: left;
     background-size: contain;
     max-height: 100%;
