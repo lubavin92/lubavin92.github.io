@@ -1,11 +1,6 @@
 "use strict"
 
-let name = null;
+function getlocation(){
+    function getlocationTwo()
 
-
-
-
-
-
-console.log(typeof name);
-console.log(name);
+}

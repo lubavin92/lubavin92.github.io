@@ -403,7 +403,7 @@ main {
 }
 
 .ability-h2 {
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 30px;
     transition: all 0.2s;
 
@@ -414,7 +414,7 @@ main {
 
 .ability-img1 {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
    
@@ -422,7 +422,7 @@ main {
 
 .ability-img2 {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
     
@@ -430,7 +430,7 @@ main {
 
 .ability-img3 {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 45px;
     transition: all 0.2s;
     transform: scale(1);
     
@@ -438,7 +438,7 @@ main {
 
 .ability-img4 {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
     transition: all 0.2s;
     transform: scale(1);
     
@@ -466,16 +466,16 @@ main {
 
 .ability-optimization {
     display: inline-block;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     color: #d17700;
-    margin-top: 20px;
+    margin-top: 30px;
 
 }
 
 .ability-marketing {
     display: inline-block;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 700;
     color: #d17700;
     margin-top: 30px;
@@ -502,21 +502,21 @@ main {
 }
 
 .ability-small-3 {
-    float: left;
+ float: left;
     font-size: 12.5px;
     color: #80858f;
+    margin-top: 12px;
     text-align: center;
-    line-height: 15px;
-    margin-top: 20px;
+    line-height: 20px;
 }
 
 .ability-small-4 {
     float: left;
     font-size: 12.5px;
     color: #80858f;
+    margin-top: 13px;
     text-align: center;
-    line-height: 15px;
-    margin-top: 20px;
+    line-height: 20px;
 }
 
 
@@ -622,7 +622,7 @@ main {
 
 .cases {
     width: 100%;
-    height: 260px;
+    height: 250px;
     background-color: #fcfdfd;
     float: left;
 }
@@ -772,7 +772,7 @@ main {
 #list1 {
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 300px;
+    width: 450px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
@@ -797,7 +797,7 @@ main {
     margin-top: 15px;
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 300px;
+    width: 450px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
@@ -820,7 +820,7 @@ main {
     margin-top: 15px;
     border: 1px solid #eeeeee;
     height: 40px;
-    width: 300px;
+    width: 450px;
     background-color: #eeeeee;
     text-align: left;
     font-size: 12.5px;
